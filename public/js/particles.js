@@ -10,13 +10,13 @@
   const SPEED        = 0.3;   // 粒子基础速度（越小越慢）
   const FRICTION     = 0.996;  // 阻尼，越接近1越平滑
   const POINT_ALPHA  = 0.85;   // 粒子透明度
-  const POINT_R_MIN  = 0.6;    // 半径范围
+  const POINT_R_MIN  = 1;    // 半径范围
   const POINT_R_MAX  = 1.8;
 
   // 鼠标相关连线
   const MOUSE_LINE_COLOR = '#78c1ff';
   const MOUSE_DIST   = 140;    // 鼠标与粒子连线的距离阈值
-  const MOUSE_FORCE  = 0.015;  // 鼠标对粒子的轻微吸引（数值小、不突兀）
+  const MOUSE_FORCE  = 0.03;  // 鼠标对粒子的轻微吸引（数值小、不突兀）
   const ENABLE_PARTICLE_LINKS = false; // 若想粒子之间也有连线改成 true
   const LINK_DIST    = 80;     // 粒子之间的连线距离（仅在上面为 true 时生效)
 
