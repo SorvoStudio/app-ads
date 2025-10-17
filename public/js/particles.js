@@ -5,7 +5,7 @@
   const ctx = canvas.getContext('2d', { alpha: true });
 
   // ---- 可调参数（按需微调） ----
-  const ENABLE_LINES = false;  // 默认关闭连线，想要就改成 true
+  const ENABLE_LINES = true;  // 默认关闭连线，想要就改成 true
   const BASE_DENSITY = 0.05;   // 粒子密度（越小越少）
   const MAX_COUNT = 90;        // 粒子上限
   const SPEED = 0.12;          // 粒子基础速度（越小越慢）
