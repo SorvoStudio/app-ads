@@ -5,49 +5,88 @@
   <title>SorvoStudio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <!-- ✅ Canonical 标签告诉 Google：这是首选 URL -->
   <link rel="canonical" href="https://www.sorvostudio.com/" />
+
   <style>
+    /* === 页面全局样式 === */
     body {
       margin: 0;
       padding: 0;
-      background-color: #090c12;
       font-family: Arial, sans-serif;
       color: white;
       text-align: center;
+
+      /* ✅ 动态渐变背景 */
+      background: linear-gradient(-45deg, #1a1f2b, #0b111a, #1e3a8a, #090c12);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
     }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body { animation: none; }
+    }
+
+    /* === 布局样式 === */
     .container {
       padding: 60px 20px;
+      position: relative;
+      z-index: 1;
     }
+
     img.logo {
       width: 180px;
       height: auto;
       margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
     }
+
     h1 {
       font-size: 36px;
       margin-bottom: 20px;
     }
+
     p {
       font-size: 18px;
       line-height: 1.6;
       max-width: 700px;
       margin: 0 auto 20px auto;
     }
+
     a {
       color: #4EA8DE;
       text-decoration: none;
+      transition: color 0.3s;
     }
+
     a:hover {
       text-decoration: underline;
+      color: #74caff;
     }
+
     footer {
       margin-top: 60px;
       font-size: 14px;
-      color: #888;
+      color: #aaa;
+    }
+
+    /* 让内容在屏幕中更垂直居中（可选） */
+    @media (min-height: 700px) {
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <img src="logo.png" alt="SorvoStudio Logo" class="logo">
