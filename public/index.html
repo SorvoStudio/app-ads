@@ -40,10 +40,9 @@
       z-index: -1;
       background: var(--bg-color);
       touch-action: none;
-      /* 移动端防止滚动冲突 */
     }
 
-    /* 主要内容 */
+    /* 主体内容 */
     .container {
       padding: 60px 20px;
       position: relative;
@@ -55,6 +54,9 @@
       height: auto;
       margin-bottom: 30px;
       filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h1 {
@@ -86,28 +88,26 @@
       color: #aaa;
     }
 
-    /* 垂直居中（高屏可选） */
+    /* ✅ 居中修复 */
     @media (min-height: 700px) {
       .container {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        /* 横向居中 */
       }
     }
 
-    /* 用户偏好：减少动效时降级为静态 */
     @media (prefers-reduced-motion: reduce) {
       #bgCanvas {
         display: none;
       }
 
-      /* 直接关闭动画画布 */
       body {
         background: #0b111a;
       }
-
-      /* 稳定静态色 */
     }
   </style>
 </head>
@@ -126,7 +126,6 @@
     <footer>&copy; 2025 SorvoStudio. All rights reserved.</footer>
   </div>
 
-  <!-- 粒子脚本 -->
   <script src="/js/particles.js" defer></script>
 </body>
 
