@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>SorvoStudio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="canonical" href="https://www.sorvostudio.com/" />
 
   <style>
-    /* === 页面全局样式 === */
+    /* === 全局样式 === */
+    :root {
+      --bg-color: #090c12;
+      --link: #4EA8DE;
+      --link-hover: #74caff;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
     body {
       margin: 0;
       padding: 0;
+      background: var(--bg-color);
       font-family: Arial, sans-serif;
-      color: white;
+      color: #fff;
       text-align: center;
-
-      /* ✅ 动态渐变背景 */
-      background: linear-gradient(-45deg, #1a1f2b, #0b111a, #1e3a8a, #090c12);
-      background-size: 400% 400%;
-      animation: gradientMove 15s ease infinite;
+      overflow-x: hidden;
     }
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    /* 背景画布（置底） */
+    #bgCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: var(--bg-color);
+      touch-action: none;
+      /* 移动端防止滚动冲突 */
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      body { animation: none; }
-    }
-
-    /* === 布局样式 === */
+    /* 主要内容 */
     .container {
       padding: 60px 20px;
       position: relative;
@@ -43,7 +54,7 @@
       width: 180px;
       height: auto;
       margin-bottom: 30px;
-      filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
     }
 
     h1 {
@@ -59,14 +70,14 @@
     }
 
     a {
-      color: #4EA8DE;
+      color: var(--link);
       text-decoration: none;
-      transition: color 0.3s;
+      transition: color .25s ease;
     }
 
     a:hover {
+      color: var(--link-hover);
       text-decoration: underline;
-      color: #74caff;
     }
 
     footer {
@@ -75,7 +86,7 @@
       color: #aaa;
     }
 
-    /* 让内容在屏幕中更垂直居中（可选） */
+    /* 垂直居中（高屏可选） */
     @media (min-height: 700px) {
       .container {
         min-height: 100vh;
@@ -84,17 +95,39 @@
         justify-content: center;
       }
     }
+
+    /* 用户偏好：减少动效时降级为静态 */
+    @media (prefers-reduced-motion: reduce) {
+      #bgCanvas {
+        display: none;
+      }
+
+      /* 直接关闭动画画布 */
+      body {
+        background: #0b111a;
+      }
+
+      /* 稳定静态色 */
+    }
   </style>
 </head>
 
 <body>
+  <!-- 背景粒子画布 -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- 主体内容 -->
   <div class="container">
-    <img src="logo.png" alt="SorvoStudio Logo" class="logo">
+    <img src="logo.png" alt="SorvoStudio Logo" class="logo" />
     <h1>Welcome to SorvoStudio</h1>
     <p>SorvoStudio is an independent game development studio based in Nanjing, China.</p>
     <p>We create fun, visually striking casual and hyper-casual mobile games for global players.</p>
     <p>Contact us: <a href="mailto:sorvostudio@gmail.com">sorvostudio@gmail.com</a></p>
     <footer>&copy; 2025 SorvoStudio. All rights reserved.</footer>
   </div>
+
+  <!-- 粒子脚本 -->
+  <script src="/js/particles.js" defer></script>
 </body>
+
 </html>
