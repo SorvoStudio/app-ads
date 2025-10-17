@@ -5,9 +5,9 @@
   const ctx = canvas.getContext('2d', { alpha: true });
 
   // ===== 可调参数 =====
-  const BASE_DENSITY = 0.2;   // 粒子密度（越小越少）
+  const BASE_DENSITY = 0.3;   // 粒子密度（越小越少）
   const MAX_COUNT    = 120;    // 粒子上限（防止超大屏过多）
-  const SPEED        = 0.14;   // 粒子基础速度（越小越慢）
+  const SPEED        = 0.3;   // 粒子基础速度（越小越慢）
   const FRICTION     = 0.996;  // 阻尼，越接近1越平滑
   const POINT_ALPHA  = 0.85;   // 粒子透明度
   const POINT_R_MIN  = 0.6;    // 半径范围
