@@ -307,3 +307,28 @@ pubmatic.com, 166078, RESELLER, 5d62403b186f2ace
 improvedigital.com, 2609, RESELLER
 copper6.com, 766114, RESELLER
 bidmachine.io, 113, RESELLER
+
+pubnative.net, 1007485, RESELLER, d641df8625486a7b
+rubiconproject.com, 16834, RESELLER, 0bfd66d529a55807
+indexexchange.com, 214183, RESELLER, 50b1c356f2c5c8fc
+video.unrulymedia.com, 3890682751, RESELLER
+media.net, 8CU355VS4, RESELLER
+app-stock.com, 562114, RESELLER, ed8c126ea5971415
+loopme.com, 15601, RESELLER, 6c8d5f95897a5a3b
+pubmatic.com, 158903, RESELLER, 5d62403b186f2ace
+pubmatic.com, 167130, RESELLER, 5d62403b186f2ace
+openx.com, 543888036, RESELLER, 6a698e2ec38604c6
+themediagrid.com, NC7LXT, RESELLER, 35d5010d7789b49d
+indexexchange.com, 214429, RESELLER, 50b1c356f2c5c8fc
+opera.com, pub6843437470464, RESELLER, 55a0c5fd61378de3
+loopme.com, 11524, RESELLER, 6c8d5f95897a5a3b
+appnexus.com, 17779, RESELLER
+xandr.com, 17779, RESELLER
+outbrain.com, 0073fa86cff719c752763d2c3ee52c8f00, RESELLER
+indexexchange.com, 192505, RESELLER, 50b1c356f2c5c8fc
+anzu.io, 691e95644e633a6eee2567ee, RESELLER, 1c1b7acf4992136c
+opera.com, pub7275292332480, RESELLER, 55a0c5fd61378de3
+video.unrulymedia.com, 657436911, RESELLER
+loopme.com, 15629, RESELLER, 6c8d5f95897a5a3b
+sharethrough.com, 4024, RESELLER, d53b998a7bd4ecd2
+smartadserver.com, 4024, RESELLER, 060d053dcf45cbf3
